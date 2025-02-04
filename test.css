@@ -1,0 +1,171 @@
+#hero {
+    display: flex; /* Utilisation de flexbox pour mettre l'image à gauche et le texte à droite */
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: space-between; /* Espace entre l'image et le texte */
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-color: #ffffff;
+background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, transparent 100%);
+background-size: 12px 12px, 100% 100%; /* Couleur de fond pour garantir que l'image et le texte se détachent */
+    padding: 0 40px; /* Ajout de padding sur les côtés pour un meilleur espacement général */
+  }
+  
+  /* Image de l'héro */
+  .hero-image {
+    flex: 1; /* L'image occupe l'espace restant */
+    margin-right: 30px; /* Ajouter un espace à droite de l'image */
+  }
+  
+  .hero-image img {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto; /* L'image garde ses proportions */
+    border-radius: 10px; /* Coins arrondis pour un look plus doux */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée pour l'image pour un effet de profondeur */
+    object-fit: cover; /* L'image conserve ses proportions sans déformation */
+  }
+  
+  /* Contenu texte */
+  .hero-content {
+    flex: 1; /* Le contenu occupe l'espace restant */
+    text-align: left; /* Le texte est aligné à gauche */
+    color: #333; /* Couleur de texte sombre pour une meilleure lisibilité */
+    padding: 0 30px; /* Ajout de padding pour espacer le texte des bords */
+    max-width: 50%; /* Limiter la largeur du texte à 50% */
+    z-index: 1; /* S'assurer que le texte reste au-dessus de l'image */
+  }
+  
+  /* Style pour le titre */
+  .hero h2 {
+    font-size: 48px; /* Taille de police plus grande pour un impact visuel */
+    font-weight: 600; /* Poids de la police pour un effet plus solide */
+    margin-bottom: 30px; /* Espacement entre le titre et le bouton */
+    animation: fadeInUp 1s ease-out;
+    line-height: 1.3;
+    max-width: 90%; /* Limiter la largeur du texte */
+    letter-spacing: 1px; /* Espacement des lettres pour un effet plus aéré */
+  }
+  
+  /* Style pour le bouton */
+  .cta-btn {
+    background-color: #3498db; /* Couleur de fond pour le bouton */
+    color: white; /* Texte du bouton en blanc */
+    font-size: 18px;
+    padding: 15px 40px; /* Plus d'espace pour un bouton plus large et plus lisible */
+    text-decoration: none;
+    border-radius: 30px; /* Coins arrondis pour un look plus moderne */
+    transition: all 0.3s ease; /* Animation pour le survol */
+    display: inline-block;
+    text-transform: uppercase; /* Texte en majuscules pour un style plus audacieux */
+  }
+  
+  .cta-btn:hover {
+    background-color: #2980b9; /* Changer la couleur du bouton au survol */
+    transform: translateY(-5px); /* Légère animation de déplacement pour le survol */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre portée au survol */
+  }
+  
+  /* Animation pour le fadeInUp */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* MEDIA QUERIES POUR LA RÉPONSIVITÉ */
+  
+  /* Pour les écrans jusqu'à 768px (tablettes et petits écrans) */
+  @media (max-width: 768px) {
+    #hero {
+      background-image: url('./img/car1.png');
+      background-size: contain;  /* L'image sera entièrement visible sans être coupée */
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 43vh;  /* Hauteur réduite de la section à 60% de la hauteur de la fenêtre */
+      width: 100%;   /* L'image couvre toute la largeur de la section */
+      display: flex;
+      justify-content: center; /* Centrer le contenu horizontalement */
+      align-items: center;     /* Centrer le contenu verticalement */
+    }
+  
+    .hero-image {
+      display: none; /* Masquer l'image physique si utilisée ailleurs dans le HTML */
+    }
+  
+    /* Centrer le texte au-dessus de l'image */
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      max-width: 100%;
+      color: white;
+      padding: 25px;
+      position: absolute; /* Placer le texte au-dessus de l'image */
+      top: 20%;
+      left: 50%; /* Centrer horizontalement */
+      transform: translate(-50%, -50%); /* Centrage parfait */
+    }
+  
+    /* Ajustement de la taille du titre */
+    .hero h2 {
+      font-size: 24px; /* Réduire la taille du titre pour les petits écrans */
+      margin-bottom: 15px;
+    }
+  
+    /* Ajustement de la taille du bouton */
+    .cta-btn {
+      font-size: 14px; /* Réduire la taille du bouton pour les petits écrans */
+      padding: 10px 20px;
+    }
+  }
+  
+  
+  
+  /* Pour les très petits écrans (mobiles très petits) */
+  @media (max-width: 480px) {
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+  
+    .cta-btn {
+      font-size: 14px;
+      padding: 10px 25px;
+    }
+  
+    .hero-content {
+      padding: 0 15px;
+    }
+  }
+
+
+
+  /* immage disparetre */
+  @media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 5%;
+        height: 43vh;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #hero > div:first-child {
+        order: 1;
+    }
+
+    #hero img {
+        max-width: 80%;
+    }
+}
