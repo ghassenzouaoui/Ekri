@@ -40,6 +40,11 @@
       font-weight: 500;
       transition: color 0.3s ease;
     }
+    nav ul li a:hover {
+      color: #0a0a07; /* Couleur au survol */
+      
+    }
+    
     .logo {
       font-size: 26px;
       font-weight: bold;
@@ -108,8 +113,8 @@
   }
   
   nav ul li a:hover {
-    color: #E0E622; /* Couleur au survol */
-    transform: scale(1.3);
+    color: #0a0a07; /* Couleur au survol */
+    
   }
   
   /* Hamburger icon */
