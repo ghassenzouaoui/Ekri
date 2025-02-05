@@ -169,3 +169,122 @@ background-size: 12px 12px, 100% 100%; /* Couleur de fond pour garantir que l'im
         max-width: 80%;
     }
 }
+
+
+
+.become-partner {
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, transparent 100%);
+  background-size: 12px 12px, 100% 100%;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Titre principal */
+.become-partner h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Paragraphe introductif */
+.become-partner p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Titre des avantages */
+.become-partner h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Liste des avantages */
+.become-partner ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.become-partner ul li {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.become-partner ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #E0E622;
+  font-size: 22px;
+  top: 0;
+}
+
+/* Section de contact */
+.become-partner a {
+  color: #004851;
+  text-decoration: none;
+}
+.become-partner a:hover {
+  background-color: #E0E622;
+}
+
+.become-partner a:hover {
+  text-decoration: underline;
+}
+
+/* Bouton Contactez-nous */
+.contact-button {
+  display: inline-block;
+  background-color: #E0E622;
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #004851;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .become-partner h2 {
+    font-size: 28px;
+  }
+
+  .become-partner p {
+    font-size: 16px;
+  }
+
+  .become-partner h3 {
+    font-size: 20px;
+  }
+
+  .become-partner ul li {
+    font-size: 16px;
+  }
+
+  .contact-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

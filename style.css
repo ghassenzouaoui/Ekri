@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9); /* Transparent avec fond blanc léger */
+    background: #004851; /* Transparent avec fond blanc léger */
     backdrop-filter: blur(12px); /* Effet de flou derrière la navbar */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet flottant */
     padding: 10px 0;
@@ -29,8 +29,25 @@
   
   /* Changement de fond et ombre lors du défilement */
   .navbar.scrolled {
-    background-color:  rgba(255, 255, 255, 0.9);/* Fond transparent */
+    background: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
+    backdrop-filter: blur(10px); /* Flou de 10px */
+    -webkit-backdrop-filter: blur(10px); /* Fond transparent */
     box-shadow: none; 
+    nav ul li a {
+      text-decoration: none;
+      color: #004851;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #004851;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
   }
   
   /* Conteneur de la navbar */
@@ -60,14 +77,15 @@
   .logo {
     font-size: 26px;
     font-weight: bold;
-    color: #2c3e50;
+    color: #E0E622;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease;
   }
   
   .logo:hover {
-    color: #3498db; /* Couleur au survol */
+    color: #E0E622; /* Couleur au survol */
+    transform: scale(1.2);
   }
   
   /* Style des liens dans la navbar */
@@ -83,14 +101,15 @@
   
   nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #E0E622;
     font-size: 18px;
     font-weight: 500;
     transition: color 0.3s ease;
   }
   
   nav ul li a:hover {
-    color: #004851; /* Couleur au survol */
+    color: #E0E622; /* Couleur au survol */
+    transform: scale(1.3);
   }
   
   /* Hamburger icon */
@@ -224,8 +243,10 @@
 }
 
 .cta-btn:hover {
-    background: #c8cc20;
-    transform: scale(1.1);
+  background: #004851;
+  color: #E0E622;
+  
+  transform: scale(1.1);
 }
 
 /* Style de l'image (placée à droite) */
@@ -406,7 +427,9 @@
   /* _____________ */
 /* Style global de la section */
 .car-rental-steps {
-    background-color: #f4f4f4;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, transparent 100%);
+  background-size: 12px 12px, 100% 100%;
     padding: 60px 20px;
     text-align: center;
   }
@@ -517,134 +540,187 @@
   
   /* ______________ */
 /* Style global de la section */
+/* Section principale */
 .become-partner {
-    background-color: #ffffff;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, transparent 100%);
-    background-size: 12px 12px, 100% 100%;
-    padding: 40px 20px;
+  text-align: center;
+  background-color: #ffffff;
+background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, transparent 100%);
+background-size: 12px 12px, 100% 100%;
+  
+}
+
+/* Titre principal */
+.become-partner h2 {
+  font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Conteneur avec effet verre dépoli */
+.container1 {
+  background: rgba(255, 255, 255, 0.15); /* Fond semi-transparent */
+  backdrop-filter: blur(10px); /* Effet verre dépoli */
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 750px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Effet au survol */
+.container1:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.02);
+}
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  /* Titre principal */
-  .become-partner h2 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
+}
+
+/* Liste stylée */
+.become-partner ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.become-partner ul li {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.become-partner ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #E0E622;
+  font-size: 22px;
+  top: 0;
+}
+
+/* Effet au survol des éléments de la liste */
+.container1 li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+
+/* Bouton contact */
+.contact-button {
+  display: inline-block;
+  background: #004851;
+  color: #E0E622;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 14px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Effet au survol du bouton */
+.contact-button:hover {
+  background: #E0E622;
+  color: #004851;
+  text-transform: uppercase;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .become-partner {
+      width: 95%;
   }
-  
-  /* Paragraphe introductif */
-  .become-partner p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 30px;
+
+  .container1 {
+      padding: 20px;
   }
-  
-  /* Titre des avantages */
-  .become-partner h3 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  /* Liste des avantages */
-  .become-partner ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-    display: inline-block;
-    margin-bottom: 30px;
-  }
-  
-  .become-partner ul li {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-  }
-  
-  .become-partner ul li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: #E0E622;
-    font-size: 22px;
-    top: 0;
-  }
-  
-  /* Section de contact */
-  .become-partner a {
-    color: #004851;
-    text-decoration: none;
-  }
-  .become-partner a:hover {
-    background-color: #E0E622;
-  }
-  
-  .become-partner a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Bouton Contactez-nous */
+
   .contact-button {
-    display: inline-block;
-    background-color: #E0E622;
-    color: white;
-    font-size: 18px;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-button:hover {
-    background-color: #004851;
-  }
-  
-  /* Responsivité */
-  @media (max-width: 768px) {
-    .become-partner h2 {
-      font-size: 28px;
-    }
-  
-    .become-partner p {
+      padding: 12px 20px;
       font-size: 16px;
-    }
-  
-    .become-partner h3 {
-      font-size: 20px;
-    }
-  
-    .become-partner ul li {
-      font-size: 16px;
-    }
-  
-    .contact-button {
-      font-size: 16px;
-      padding: 10px 20px;
-    }
   }
-  
-  
+}
+
+
 /* ____________________   */
 
 
 /* Section des boutons d'application */
 .app-download {
-    background-color: #0a192f; /* Fond bleu foncé */
-    padding: 50px 20px;
-    text-align: center;
-    color: #fff;
+  background-color: #0a192f; /* Fond bleu foncé */
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Titre principal */
+.app-download h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Carte d'information */
+.about-us {
+  width: 100%; /* Réduit la largeur à 50% du parent */
+    max-width: 700px; /* Limite la largeur maximale */
+    min-width: 250px; /* Empêche qu'elle devienne trop petite */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Titres */
+.about-us h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Texte */
+.about-us p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Texte en gras coloré */
+strong {
+  color: #E0E622;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-download {
+      width: 95%;
   }
+  .about-us {
+      padding: 15px;
+  }
+}
+
   
   .app-buttons {
     display: flex;
@@ -666,7 +742,7 @@
   }
   
   .app-buttons a:hover {
-    background-color: #f07c00; /* Couleur plus foncée au survol */
+    background-color: #E0E622; /* Couleur plus foncée au survol */
   }
   
   .app-buttons i {
